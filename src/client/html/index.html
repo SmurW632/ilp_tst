@@ -7,30 +7,24 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!-- ОШИБКА 1: Неправильная структура заголовков -->
     <h3>Добро пожаловать</h3>
     <h2>в наш сервис</h2>
     
-    <!-- ОШИБКА 2: Отсутствует семантическая разметка -->
-    <div class="container">
-        <div class="form">
-            <input type="text" id="name" placeholder="Ваше имя">
-            <!-- ОШИБКА 3: Нет label для accessibility -->
-            <input type="email" id="email" placeholder="Email">
-            <!-- ОШИБКА 4: Кнопка без type и неправильный класс -->
-            <button class="btn" onclick="submitForm()">Отправить</button>
-        </div>
-        
-        <!-- ОШИБКА 5: Жестко заданные стили inline -->
-        <div style="margin-top: 20px; background: #f0f0f0; padding: 10px;">
-            <p>Результат: <span id="result"></span></p>
-        </div>
-        
-        <!-- ОШИБКА 6: Устаревший атрибут align -->
-        <div align="center">
-            <img src="https://via.placeholder.com/300x200" alt="placeholder">
-        </div>
-    </div>
+    <form id="userForm" class="user-form">
+            <div class="form-group">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required 
+                       placeholder="Введите ваше имя" aria-required="true">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required 
+                       placeholder="example@domain.com" aria-required="true">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
     
     <!-- ОШИБКА 7: Скрипт загружается до DOM -->
     <script src="../js/main.js"></script>
