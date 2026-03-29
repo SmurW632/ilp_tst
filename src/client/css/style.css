@@ -1,0 +1,59 @@
+/* ОШИБКА 1: Использование !important везде */
+.container {
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+/* ОШИБКА 2: Неспецифичные селекторы */
+div {
+    font-family: Arial, sans-serif;
+}
+
+/* ОШИБКА 3: Отсутствует responsive design */
+.form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ОШИБКА 4: Неправильная специфичность цветов */
+.btn {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* ОШИБКА 5: Нет состояний hover/focus */
+.btn:hover {
+    background: darkblue;
+}
+
+/* ОШИБКА 6: Дублирование кода */
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+/* ОШИБКА 7: Неиспользуемые стили */
+.unused-class {
+    display: none;
+}
+
+/* ОШИБКА 8: Проблемы с доступностью (низкий контраст) */
+.result {
+    color: #999;
+    font-size: 14px;
+}
